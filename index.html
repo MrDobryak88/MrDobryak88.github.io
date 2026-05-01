@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Темурлан | Портфолио разработчика</title>
-    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="style.css?v=3">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
     <header class="hero">
         <div class="container">
             <h1>👋 Привет, я Темурлан</h1>
-            <p class="tagline">Java-разработчик • Ищу стажировку • ItHub Caspian</p>
+            <p class="tagline">Java Backend • Spring Boot • Ищу стажировку • ItHub Caspian</p>
             
             <div class="social-links">
                 <a href="https://github.com/MrDobryak88" target="_blank"><i class="fab fa-github"></i> GitHub</a>
@@ -25,54 +25,106 @@
         <div class="container">
             <h2>🎓 Обо мне</h2>
             <p>
-                Студент, пишу на Java, но имел опыт с многими другими языками.
-                Сейчас ищу стажировку, чтобы расти как разработчик.
+                Студент 3 курса, фокусируюсь на бэкенд-разработке на Java.
+                Имею опыт работы с базами данных, REST API, командной разработки.
+                Ищу стажировку, чтобы применять навыки в реальных продуктах.
             </p>
+            <p><em>Не пишу код ради кода — мне важно, чтобы всё работало и приносило пользу.</em></p>
         </div>
     </section>
 
     <section class="skills">
         <div class="container">
-            <h2>🛠 Что умею</h2>
+            <h2>🛠 Технологии</h2>
             <div class="skills-list">
                 <span class="skill-tag">Java</span>
+                <span class="skill-tag">Spring Boot</span>
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">Docker</span>
                 <span class="skill-tag">Python</span>
                 <span class="skill-tag">SQLite</span>
-                <span class="skill-tag">Git</span>
-                <span class="skill-tag">SQL</span>
             </div>
         </div>
     </section>
 
     <section class="projects">
         <div class="container">
-            <h2>📂 Мои проекты</h2>
+            <h2>📂 Проекты</h2>
             
+            <!-- Главный проект: Java -->
+            <div class="project featured">
+                <span class="badge">Java • Spring Boot</span>
+                <h3>📚 LibraryAPI</h3>
+                <p>REST-сервис для библиотечной системы: учёт книг, авторов, читателей, выдача/возврат. Командный учебный проект.</p>
+                <div class="tech-used">
+                    <small>Java 17 • Spring Boot • PostgreSQL • JPA • Docker • JUnit</small>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/protectflame/LibraryAPI" class="link" target="_blank">
+                        <i class="fab fa-github"></i> Код
+                    </a>
+                    <span class="note">Мой вклад: модули Book/Author, CRUD, поиск, DTO</span>
+                </div>
+            </div>
+
+            <!-- JavaFX проект -->
             <div class="project">
+                <span class="badge">Java • JavaFX</span>
+                <h3>🎵 Music Player</h3>
+                <p>Десктопный плеер на JavaFX: воспроизведение, плейлисты, управление громкостью, сохранение списка треков.</p>
+                <div class="tech-used">
+                    <small>Java • JavaFX • Maven • OOP</small>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/MrDobryak88/PlayerDBR" class="link" target="_blank">
+                        <i class="fab fa-github"></i> Код
+                    </a>
+                </div>
+            </div>
+
+            <!-- Python проекты (как дополнительный опыт) -->
+            <div class="project">
+                <span class="badge">Python • Desktop</span>
                 <h3>💱 ConvertMoney</h3>
-                <p>Приложение для учёта валют. Берёт курсы с ЦБ РФ, рисует графики, работает офлайн.</p>
+                <p>Учёт валютных операций: API ЦБ РФ, графики, офлайн-режим, экспорт данных.</p>
                 <div class="tech-used">
-                    <small>Python • CustomTkinter • SQLite • API</small>
+                    <small>Python • CustomTkinter • SQLite • Requests • Matplotlib</small>
                 </div>
-                <a href="https://github.com/MrDobryak88/ConvertMoney" class="link" target="_blank">
-                    Посмотреть код →
-                </a>
+                <div class="project-links">
+                    <a href="https://github.com/MrDobryak88/MoneyERS" class="link" target="_blank">
+                        <i class="fab fa-github"></i> Код
+                    </a>
+                </div>
             </div>
 
             <div class="project">
+                <span class="badge">Python • Desktop</span>
                 <h3>💊 Pharmacy Manager</h3>
-                <p>Система для аптеки: товары, продажи, клиенты, аналитика. Интерфейс на PySide6.</p>
+                <p>Система управления аптекой: товары, продажи, клиенты, аналитика, настройки интерфейса.</p>
                 <div class="tech-used">
-                    <small>Python • PySide6 • Matplotlib • SQLite</small>
+                    <small>Python • PySide6 • SQLite • Matplotlib</small>
                 </div>
-                <a href="https://github.com/MrDobryak88/pharmacy-manager" class="link" target="_blank">
-                    Посмотреть код →
-                </a>
+                <div class="project-links">
+                    <a href="https://github.com/MrDobryak88/Pharmacy-Manager" class="link" target="_blank">
+                        <i class="fab fa-github"></i> Код
+                    </a>
+                </div>
             </div>
 
-            <div class="project placeholder">
-                <h3>🚀 Скоро...</h3>
-                <p>Здесь будет следующий проект. Работаю над ним в свободное время.</p>
+            <div class="project">
+                <span class="badge">Python • GUI</span>
+                <h3>❓ QuizApp</h3>
+                <p>Приложение для создания и прохождения тестов: два типа вопросов, локализация, экспорт в CSV, графики.</p>
+                <div class="tech-used">
+                    <small>Python • Tkinter • JSON • Matplotlib</small>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/MrDobryak88/QuizDag" class="link" target="_blank">
+                        <i class="fab fa-github"></i> Код
+                    </a>
+                </div>
             </div>
 
         </div>
@@ -81,7 +133,7 @@
     <section class="contact">
         <div class="container">
             <h2>📬 Связаться</h2>
-            <p>Открыт к предложениям о стажировке. Пишите, не стесняйтесь!</p>
+            <p>Открыт к предложениям о стажировке в бэкенд-разработке. Пишите, не стесняйтесь!</p>
             
             <div class="contact-buttons">
                 <a href="mailto:d809462@gmail.com" class="btn">Написать на почту</a>
