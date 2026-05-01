@@ -1,235 +1,237 @@
-/* === Сброс и базовые настройки === */
+/* базовые настройки, тёмная тема */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  --primary: #2563eb;
-  --primary-dark: #1d4ed8;
-  --text: #1e293b;
-  --text-light: #64748b;
-  --bg: #ffffff;
-  --bg-light: #f8fafc;
-  --border: #e2e8f0;
-  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  line-height: 1.6;
-  color: var(--text);
-  background: var(--bg);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0f172a;  /* тёмно-синий фон, не чисто чёрный */
+    color: #e2e8f0;
+    line-height: 1.5;
 }
 
 .container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 a {
-  color: var(--primary);
-  text-decoration: none;
+    color: #60a5fa;  /* светло-голубой для ссылок */
+    text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
-/* === Шапка (Hero) === */
+/* шапка */
 .hero {
-  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-  color: white;
-  padding: 5rem 0;
-  text-align: center;
+    background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+    padding: 60px 0;
+    text-align: center;
+    border-bottom: 1px solid #334155;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
 
-.hero .subtitle {
-  font-size: 1.25rem;
-  opacity: 0.9;
-  margin-bottom: 2rem;
+.tagline {
+    color: #94a3b8;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
 }
 
-.buttons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
+.social-links {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    color: #cbd5e1;
+    padding: 8px 16px;
+    border: 1px solid #475569;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.social-links a:hover {
+    background: #334155;
+    text-decoration: none;
+}
+
+/* секции */
+section {
+    padding: 40px 0;
+}
+
+section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #334155;
+    display: inline-block;
+}
+
+/* обо мне */
+.about p {
+    color: #cbd5e1;
+    margin-bottom: 10px;
+}
+
+.about em {
+    color: #94a3b8;
+    font-size: 0.95rem;
+}
+
+/* навыки - теги */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    background: #1e293b;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    border: 1px solid #475569;
+    color: #e2e8f0;
+}
+
+.skill-tag:hover {
+    border-color: #60a5fa;
+    cursor: default;
+}
+
+/* проекты */
+.project {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border-left: 4px solid #60a5fa;  /* акцент слева */
+}
+
+.project h3 {
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+.project p {
+    color: #cbd5e1;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+}
+
+.tech-used small {
+    color: #94a3b8;
+    font-size: 0.85rem;
+}
+
+.link {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.link:hover {
+    color: #93c5fd;
+}
+
+/* заглушка для будущих проектов */
+.project.placeholder {
+    border-left-color: #64748b;
+    opacity: 0.7;
+}
+
+.project.placeholder h3 {
+    color: #94a3b8;
+}
+
+/* контакты */
+.contact-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 15px;
 }
 
 .btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  font-weight: 500;
-  transition: transform 0.2s;
+    display: inline-block;
+    padding: 10px 20px;
+    background: #60a5fa;
+    color: #0f172a;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: 0.2s;
 }
 
 .btn:hover {
-  transform: translateY(-2px);
-  text-decoration: none;
+    background: #93c5fd;
+    text-decoration: none;
+    color: #0f172a;
 }
 
-.btn.primary {
-  background: white;
-  color: var(--primary);
+.btn.outline {
+    background: transparent;
+    border: 2px solid #60a5fa;
+    color: #60a5fa;
 }
 
-.btn.secondary {
-  background: transparent;
-  color: white;
-  border: 2px solid white;
+.btn.outline:hover {
+    background: #60a5fa;
+    color: #0f172a;
 }
 
-/* === Секции === */
-.section {
-  padding: 4rem 0;
-}
-
-.section.bg-light {
-  background: var(--bg-light);
-}
-
-.section h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: var(--text);
-}
-
-/* === Навыки === */
-.skills-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  justify-content: center;
-}
-
-.skill {
-  background: var(--primary);
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: 500;
-}
-
-/* === Карточки проектов === */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-}
-
-.project-card {
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: var(--shadow);
-  transition: transform 0.2s;
-}
-
-.project-card:hover {
-  transform: translateY(-4px);
-}
-
-.project-card h3 {
-  margin-bottom: 0.75rem;
-  font-size: 1.25rem;
-}
-
-.project-card p {
-  color: var(--text-light);
-  margin-bottom: 1rem;
-  font-size: 0.95rem;
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.tags span {
-  background: var(--bg-light);
-  padding: 0.25rem 0.75rem;
-  border-radius: 6px;
-  font-size: 0.8rem;
-  color: var(--text-light);
-  border: 1px solid var(--border);
-}
-
-.links a {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: 500;
-}
-
-.links a i {
-  font-size: 1.1rem;
-}
-
-/* === Контакты === */
-.contact-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  margin-top: 1.5rem;
-}
-
-.contact-links a {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  border: 2px solid var(--primary);
-  border-radius: 8px;
-  color: var(--primary);
-  font-weight: 500;
-  transition: all 0.2s;
-}
-
-.contact-links a:hover {
-  background: var(--primary);
-  color: white;
-  text-decoration: none;
-}
-
-/* === Футер === */
+/* футер */
 footer {
-  text-align: center;
-  padding: 2rem;
-  color: var(--text-light);
-  font-size: 0.9rem;
-  border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 30px 0;
+    color: #64748b;
+    font-size: 0.9rem;
+    border-top: 1px solid #334155;
+    margin-top: 20px;
 }
 
-/* === Адаптив === */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-  
-  .hero .subtitle {
-    font-size: 1.1rem;
-  }
-  
-  .section {
-    padding: 3rem 0;
-  }
-  
-  .container {
-    padding: 0 1.5rem;
-  }
+footer a {
+    color: #94a3b8;
+}
+
+/* адаптив для мобилок */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+    
+    .tagline {
+        font-size: 1rem;
+    }
+    
+    section {
+        padding: 30px 0;
+    }
+    
+    .contact-buttons {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* небольшая анимация при наведении на проекты */
+.project:hover {
+    transform: translateY(-2px);
+    transition: 0.2s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
