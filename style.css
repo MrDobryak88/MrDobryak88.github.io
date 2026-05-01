@@ -210,3 +210,48 @@ footer a {
     transition: 0.2s;
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
+/* === Бейджи для проектов === */
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    background: #334155;
+    color: #94a3b8;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+/* === Выделенный проект === */
+.project.featured {
+    border-left-color: #22c55e;  /* зелёный акцент для главного проекта */
+    background: #1a2436;  /* чуть светлее фона */
+}
+
+.project.featured .badge {
+    background: #22c55e;
+    color: #0f172a;
+}
+
+/* === Ссылки внутри проекта === */
+.project-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.project-links .note {
+    color: #64748b;
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+/* === Адаптив для ссылок === */
+@media (max-width: 600px) {
+    .project-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
